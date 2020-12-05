@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue-数据检索示例</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+
+<body class="body">
+    <div id="app">
+        <el-page-header @back="goBack" content="检索数据"></el-page-header>
+        <br>
+        <br>
+
+        <el-row type="flex" class="row-bg" justify="center">
+            <el-button type="success" v-on:click="search" icon="el-icon-search" plain>发起检索</el-button>
+            <el-button type="danger" v-on:click="clean" icon="el-icon-delete" plain>清空内容</el-button>
+            <el-button type="info" v-show="show" v-on:click="a < info.data.length-10 && info.data.length>0? a=a+10:a=0"
+                icon="el-icon-refresh" plain>换一批
+            </el-button>
+        </el-row>
+
+        <p class="mzgs">命中个数: {{count}}</p>
+
+        <!-- 展示方式1 -->
+        <!-- <el-card class="box-card">
+        <div v-for="user in info.data"  class="text item">
+            <p>ID：{{user.id}}	</p>
+            <p>title：{{user.title}}</p>
+            <p>body：{{user.body}}</p>
+        </div>
+        </el-card> -->
+
+        <!-- 展示方式2 -->
+        <template>
+            <el-table :data="info.data.slice(a, a+10)" v-loading="loading" stripe style="width: 100%">
+                <el-table-column prop="id" label="序号" width="80">
+                </el-table-column>
+                <el-table-column prop="title" label="标题" width="350">
+                </el-table-column>
+                <el-table-column prop="body" label="内容">
+                </el-table-column>
+            </el-table>
+        </template>
+
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

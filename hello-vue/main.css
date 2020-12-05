@@ -1,0 +1,23 @@
+.text {
+    font-size: 30px;
+}
+
+.item {
+    padding: 10px 0;
+}
+
+.box-card {
+    width: 480px;
+}
+
+.mzgs{
+    font-size: 16px;
+    color: #909399;
+    
+}
+
+.body{
+    background-color: snow;
+    /* background-image: url(./wallpaper.png); */
+    
+}
