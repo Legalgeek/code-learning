@@ -10,11 +10,11 @@
 ```
 new VUE({
 	el:"#app",
-  data:{
-    name : "legalgeek",
-    age:25,
-    school: BIT
-  }
+	data:{
+	    name : "legalgeek",
+	    age:25,
+	    school: BIT
+	    }
   })
 ```
 
