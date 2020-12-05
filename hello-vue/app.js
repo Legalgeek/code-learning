@@ -53,7 +53,7 @@ new Vue({
         open3() {
             this.$message({
                 showClose: true,
-                message: '抱歉，回不去了',
+                message: '抱歉，回不去了……',
                 type: 'warning'
             });
         }

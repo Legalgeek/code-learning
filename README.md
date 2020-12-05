@@ -11,12 +11,12 @@
 new VUE({
 	el:"#app",
 	data:{
-	    name : "legalgeek",
-	    age:25,
-	    school: BIT
-	    }
+		name : "legalgeek",
+		age:25,
+		school: BIT
+	}
   })
 ```
 
 增加一行新的说明
-
+更新代码的格式
